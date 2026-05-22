@@ -1,0 +1,102 @@
+﻿<Page x:Class="CarsharingApp.CarsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CarsharingApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CarsPage">
+
+    <Page.Background>
+        <SolidColorBrush Color="LightGray"/>
+    </Page.Background>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Список машин"
+           FontSize="24"
+           FontWeight="Bold"
+           HorizontalAlignment="Center"
+           Margin="0,10" 
+           FontFamily="Arial"
+           Foreground="DarkBlue"/>
+
+        <Grid Grid.Row="1" VerticalAlignment="Top" Width="700">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <DataGrid Name="GuestsDataGrid" 
+              Grid.Row="2" 
+              AutoGenerateColumns="False" 
+              Height="200"
+              Background="White">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Модель" Binding="{Binding model}" Width="Auto"/>
+                    <DataGridTextColumn Header="Цена за час" Binding="{Binding PricePerHour}" Width="Auto"/>
+                    <DataGridTextColumn Header="Номер" Binding="{Binding number}" Width="Auto"/>
+                    <DataGridTextColumn Header="Цвет" Binding="{Binding color}" Width="Auto"/>
+                    <DataGridTextColumn Header="Расход топлива" Binding="{Binding FuelConsumption}" Width="Auto"/>
+                    <DataGridTextColumn Header="Число мест" Binding="{Binding NumberOfSeats}" Width="Auto"/>
+                    <DataGridTextColumn Header="Класс автомобиля" Binding="{Binding CarClass}" Width="Auto"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Grid.Row="3" 
+                Orientation="Horizontal" 
+                Margin="0,10,0,0"
+                HorizontalAlignment="Center">
+
+                <Button Content="Экран подготовки"
+                     Width="150" 
+                     Height="30"   
+                     Background="SteelBlue"    
+                     Foreground="White"
+                     FontWeight="Bold"
+                     Cursor="Hand"   
+                     BorderThickness="0" 
+                     Margin="0,0,10,0"
+                     Click="SpecificationsButton_Click"/>
+
+                <Button Content="Добавить машину"
+                Width="130" 
+                Height="30"     
+                Background="SteelBlue"    
+                Foreground="White"
+                FontWeight="Bold"
+                Cursor="Hand"   
+                BorderThickness="0"
+                Margin="0,0,10,0" 
+                Click="AddCarsButton_Click"/>
+
+                <Button Content="Удалить машину"
+                Width="130" 
+                Height="30"   
+                Background="Gray"
+                Foreground="White"
+                FontWeight="Bold"
+                Cursor="Hand"   
+                BorderThickness="0"
+                Margin="0,0,10,0"/>
+
+                <Button Content="Экран бронирования"
+                Width="150" 
+                Height="30"   
+                Background="SteelBlue"    
+                Foreground="White"
+                FontWeight="Bold"
+                Cursor="Hand"   
+                BorderThickness="0" 
+                Click="CarsheringButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

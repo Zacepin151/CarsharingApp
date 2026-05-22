@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2dd9e2643d5f4d00954837da6328ad2c" Name="Diagram1">
+        <EntityTypeShape EntityType="CarsharingdbModel.Booking" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsharingdbModel.Cars" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsharingdbModel.Customers" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsharingdbModel.Preperation" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsharingdbModel.Price" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsharingdbModel.Specifications" Width="1.5" PointX="6" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsharingdbModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsharingdbModel.Users" Width="1.5" PointX="4.75" PointY="8.625" IsExpanded="true" />
+        <AssociationConnector Association="CarsharingdbModel.FK_Booking_Cars" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsharingdbModel.FK_Booking_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsharingdbModel.FK_Booking_Price" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsharingdbModel.FK_Specifications_Cars" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsharingdbModel.FK_Specifications_Cars1" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsharingdbModel.FK_Specifications_Preperation" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

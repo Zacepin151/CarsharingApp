@@ -1,0 +1,59 @@
+﻿<Page x:Class="CarsharingApp.PreperationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CarsharingApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Страница спецификации">
+
+    <Page.Background>
+        <SolidColorBrush Color="LightGray"/>
+    </Page.Background>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Спецификации - стандарт подготовки авто"
+               FontSize="24"
+               FontWeight="Bold"
+               HorizontalAlignment="Center"
+               Margin="0,10" 
+               FontFamily="Arial"
+               Foreground="DarkBlue"/>
+
+        <Grid Grid.Row="1" VerticalAlignment="Top" Width="600">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <DataGrid Name="GuestsDataGrid" 
+                  Grid.Row="2" 
+                  AutoGenerateColumns="False" 
+                  Height="200" 
+                  Background="White"
+                  SelectionChanged="GuestsDataGrid_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Материал" Binding="{Binding material}" Width="Auto"/>
+                    <DataGridTextColumn Header="Ед.изм" Binding="{Binding unit}" Width="Auto"/>
+                    <DataGridTextColumn Header="Количество" Binding="{Binding quantity}" Width="Auto"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Grid.Row="3" 
+            Orientation="Horizontal" 
+            Margin="0,10,0,0"
+            HorizontalAlignment="Left">
+                
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Page>

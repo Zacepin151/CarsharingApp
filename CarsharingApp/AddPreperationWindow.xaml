@@ -1,0 +1,83 @@
+﻿<Window x:Class="CarsharingApp.AddPreperationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarsharingApp"
+        mc:Ignorable="d"
+        Title="Добавление подготовки" Height="350" Width="400">
+
+    <Window.Background>
+        <SolidColorBrush Color="LightGray"/>
+    </Window.Background>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" 
+                   Text="Добавить подготовку"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,10" 
+                   FontFamily="Arial"
+                   Foreground="DarkBlue"/>
+
+        <Label Content="Продукция:" Grid.Row="1" FontWeight="Bold" Foreground="#333333"/>
+        <TextBox x:Name="Products" 
+                 Grid.Row="1"
+                 Margin="120,0,0,5"
+                 Height="30"
+                 Background="White"/>
+
+        <Label Content="Ед.изм.:" Grid.Row="2" FontWeight="Bold" Foreground="#333333"/>
+        <TextBox x:Name="Unit" 
+                 Grid.Row="2" 
+                 Margin="120,0,0,5"
+                 Height="30"
+                 Background="White"/>
+
+        <Label Content="Количество:" Grid.Row="3" FontWeight="Bold" Foreground="#333333"/>
+        <TextBox x:Name="Quantity" 
+                 Grid.Row="3" 
+                 Margin="120,0,0,5"
+                 Height="30"
+                 Background="White"/>
+
+        <Label Content="Цена:" Grid.Row="4" FontWeight="Bold" Foreground="#333333"/>
+        <TextBox x:Name="Price" 
+                 Grid.Row="4" 
+                 Margin="120,0,0,5"
+                 Height="30"
+                 Background="White"/>
+
+        <Label Content="Стоимость:" Grid.Row="5" FontWeight="Bold" Foreground="#333333"/>
+        <TextBox x:Name="Cost"
+                 Grid.Row="5" 
+                 Margin="120,0,0,5"
+                 Height="30"
+                 Background="White"/>
+
+        <Button Content="Добавить"
+                Width="120" 
+                Height="30"     
+                Background="SteelBlue"    
+                Foreground="White"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Cursor="Hand"   
+                Grid.Row="8" 
+                Margin="0,10,0,0" 
+                BorderThickness="0"/>
+    </Grid>
+</Window>
